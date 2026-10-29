@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.token_cache.json
+devices.json
+handshake.bin
+squad_response.bin
+.venv/
+env/
+venv/
+.DS_Store

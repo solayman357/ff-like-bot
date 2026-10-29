@@ -1,0 +1,14 @@
+# Render blueprint for FF Like Telegram Bot (polling worker)
+services:
+  - type: worker
+    name: ff-like-bot
+    env: python
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: python tg_like_bot.py
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: FFLIKE_BOT_TOKEN
+        sync: false
